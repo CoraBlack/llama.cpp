@@ -19,6 +19,10 @@ enum display_type {
 class console_t {
 private:
     console_t();
+    console_t(const console_t&) = delete;
+    console_t(const console_t&&) = delete;
+    console_t operator= (console_t&)  = delete;
+    console_t operator= (console_t&&) = delete;
 
 public:
     ~console_t();
